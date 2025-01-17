@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  title: Item Search
+  version: 1.0.0
+servers:
+  - url: https://gem7-jvumo22wtq-uc.a.run.app
+paths:
+  /items:
+    get:
+      summary: Get Items
+      operationId: getitems
+      parameters:
+        - in: query
+          name: q
+          schema:
+            type: string
+          required: true
+          description: Search query string
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: Maximum number of results to return
+      responses:
+        '200':
+          description: List of items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    name:
+                      type: string
+        '400':
+          description: Invalid query parameters

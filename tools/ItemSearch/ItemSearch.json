@@ -1,0 +1,13 @@
+{
+  "name": "0e211513-53e3-439a-a944-a15dc3ca005d",
+  "displayName": "ItemSearch",
+  "description": "This API definition describes an application with two main functionalities:\n\n1. Item Search:\n\nUsers can search for items using a query string.\nThe API accepts a q parameter in the query string for the search term.\nAn optional limit parameter can be used to specify the maximum number of results to return.\nThe response will be a JSON array containing item objects.\nEach item object will have an id and a name property.",
+  "openApiSpec": {
+    "authentication": {
+      "serviceAgentAuthConfig": {
+        "serviceAgentAuth": "ID_TOKEN"
+      }
+    }
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

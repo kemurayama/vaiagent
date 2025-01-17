@@ -1,0 +1,18 @@
+{
+  "displayName": "Item Shop",
+  "defaultLanguageCode": "en",
+  "timeZone": "America/Los_Angeles",
+  "enableLogging": true,
+  "projectNumber": 322406802004,
+  "enableStackdriverLogging": true,
+  "advancedSettings": {
+    "loggingSettings": {
+      "enableStackdriverLogging": true,
+      "enableInteractionLogging": true
+    }
+  },
+  "genAppBuilderSettings": {
+    "engine": "projects/322406802004/locations/us/collections/default_collection/engines/5989abb3-c9fa-4fa1-ac93-f377a46dc285"
+  },
+  "startPlaybook": "ItemShopAgent"
+}

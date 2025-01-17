@@ -1,0 +1,121 @@
+{
+  "name": "8c54e75a-7c3d-4674-b037-48ddbbd85e6a",
+  "actions": [ {
+    "userUtterance": {
+      "text": "こんにちは"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "いらっしゃい。何をお探しだい？"
+    }
+  }, {
+    "userUtterance": {
+      "text": "回復アイテムが欲しい"
+    }
+  }, {
+    "toolUse": {
+      "tool": "ItemSearch",
+      "action": "getitems",
+      "inputActionParameters": {
+        "limit": 10,
+        "q": "回復アイテム"
+      },
+      "outputActionParameters": {
+        "200": [ {
+          "effect": "回復薬の材料",
+          "id": "c3297d7d-0cd5-4851-a689-3233f848cccf",
+          "name": "薬草",
+          "price": 50
+        }, {
+          "effect": "HPを少し回復",
+          "id": "5ccc7076-07aa-4be6-b851-6581556d9b09",
+          "name": "回復の泉の水",
+          "price": 100
+        }, {
+          "effect": "回復魔法の効果が1.1倍になる",
+          "id": "dcc96c11-9c80-4b30-b3c2-2c9c345f8277",
+          "name": "癒しの杖",
+          "price": 1200
+        }, {
+          "effect": "MPを少し回復",
+          "id": "f5bf4d29-4e2f-4df5-becb-d63a45c60c5d",
+          "name": "エーテル",
+          "price": 500
+        }, {
+          "effect": "MPを中程度回復",
+          "id": "79fe9b75-1877-473c-9ce9-5faf6768a836",
+          "name": "ハイ・エーテル",
+          "price": 1000
+        }, {
+          "effect": "HPを全回復、状態異常を全て回復",
+          "id": "6fe742f3-bc65-48f9-82cb-637c6e645b4e",
+          "name": "万能薬",
+          "price": 300
+        }, {
+          "effect": "HPとMPを全回復",
+          "id": "54ebb34c-f610-457a-a69c-2698e18e21be",
+          "name": "エリクサー",
+          "price": 3000
+        }, {
+          "effect": "MPを全回復",
+          "id": "3e0c7ab3-76fb-4cb1-9aa5-0eda95c6c6be",
+          "name": "精霊の涙",
+          "price": 5000
+        }, {
+          "effect": "全ての状態異常を回復",
+          "id": "8b50b8cd-5f15-48f7-9598-919192edf022",
+          "name": "万能解毒薬",
+          "price": 500
+        }, {
+          "effect": "毒状態を回復",
+          "id": "72dc9679-ddc0-4b12-9883-977913a3dd46",
+          "name": "解毒薬",
+          "price": 100
+        } ]
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "これらのアイテムがあるぞ。\n- 薬草 50ゴールド 回復薬の材料になるぞ。\n- 回復の泉の水 100ゴールド HPを少し回復する。\n- 癒しの杖 1200ゴールド 回復魔法の効果が1.1倍になるぞ。\n- エーテル 500ゴールド MPを少し回復するな\n- ハイ・エーテル 1000ゴールド MPを中程度回復する。\n- 万能薬 300ゴールド HPを全回復し、状態異常を全て回復する。\n- エリクサー 3000ゴールド HPとMPを全回復する。\n- 精霊の涙 5000ゴールド MPを全回復する。\n-  万能解毒薬は500ゴールド 全ての状態異常を回復する。\n- 解毒薬は100ゴールドで、毒状態を回復するぞ。\n\nさあ、どれがいいんだい？"
+    }
+  }, {
+    "userUtterance": {
+      "text": "薬草を買いたいです。私の UserID は 05a58009-2f9c-4cee-97c9-5490d57a9938 です"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "はいよ薬草だね。"
+    }
+  }, {
+    "toolUse": {
+      "tool": "Purchase",
+      "action": "purchase",
+      "inputActionParameters": {
+        "requestBody": {
+          "itemId": "c3297d7d-0cd5-4851-a689-3233f848cccf",
+          "price": 50,
+          "quantity": 1,
+          "userId": "05a58009-2f9c-4cee-97c9-5490d57a993"
+        }
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "薬草を道具袋に入れておいたよ。他に何か必要かい？"
+    }
+  }, {
+    "userUtterance": {
+      "text": "いらないです。ありがとうございました。"
+    }
+  } ],
+  "playbookOutput": {
+    "executionSummary": "あいよ。またきてね。"
+  },
+  "displayName": "Successful Purchase",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

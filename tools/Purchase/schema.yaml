@@ -1,0 +1,38 @@
+openapi: 3.0.0
+info:
+  title: Purchase
+  version: 1.0.0
+servers:
+  - url: https://gem7-jvumo22wtq-uc.a.run.app
+paths:
+  /purchase:
+    post:
+      summary: Create a new purchase
+      operationId: purchase
+      requestBody:
+        description: Purchase object that needs to be created
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Purchase'
+      responses:
+        '200':
+          description: Purchase created successfully
+        '400':
+          description: Invalid input
+components:
+  schemas:
+    Purchase:
+      type: object
+      properties:
+        userId:
+          type: string
+        itemId:
+          type: string
+        quantity:
+          type: integer
+          format: int64
+      required:
+        - itemId
+        - quantity

@@ -1,0 +1,28 @@
+{
+  "name": "bd886ed3-f286-4493-9823-73d0b636992f",
+  "displayName": "StorySearch",
+  "description": "The tool is used when the agent answer about the character's name.",
+  "dataStoreSpec": {
+    "dataStoreConnections": [ {
+      "dataStoreType": "UNSTRUCTURED",
+      "dataStore": "projects/322406802004/locations/us/collections/default_collection/dataStores/storystore_1716454067626",
+      "documentProcessingMode": "DOCUMENTS"
+    } ],
+    "models": {
+      "summarizationModel": {
+        "model": "gemini_15_flash_001"
+      }
+    },
+    "fallbackPrompt": {
+      "company": "kemitemshop"
+    },
+    "groundingSettings": {
+      "groundingConfidence": "LOW",
+      "heuristicsDisabled": true
+    },
+    "payloadSettings": {
+    
+    }
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

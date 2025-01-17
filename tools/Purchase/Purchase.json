@@ -1,0 +1,9 @@
+{
+  "name": "6ad38b29-ea33-40b1-841d-179995d23a65",
+  "displayName": "Purchase",
+  "description": "This tool is an API endpoint that allows users to create new purchase orders. It accepts a JSON payload containing information about the purchase, such as the user ID, item ID, quantity, and price.\n\nHere's a breakdown of the key features:\n\nEndpoint: /purchase Method: POST Operation ID: createPurchase Request Body:\n\nType: JSON\nRequired Fields:\nuserID: Unique identifier for the should be provided by the user (string)\nitemId: Unique identifier for the item being purchased (string)\nquantity: Number of items being purchased (integer)\nprice: Price of the item (integer). \n\nResponses:\n200 Created: The purchase order was successfully created.\n400 Bad Request: The provided input was invalid (e.g., missing required fields, incorrect data types, insufficient user money).",
+  "openApiSpec": {
+  
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}
